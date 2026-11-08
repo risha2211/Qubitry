@@ -7,7 +7,7 @@
     "dev:server": "npm --prefix QUBITRY/apps/server run dev",
     "dev:web": "npm --prefix QUBITRY/apps/web run dev",
     "dev": "node scripts/dev.js",
-    "build": "npm --prefix QUBITRY run build",
+    "build": "npm --prefix QUBITRY/apps/web run build",
     "test": "npm --prefix QUBITRY run test"
   }
 }

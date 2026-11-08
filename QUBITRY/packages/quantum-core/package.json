@@ -1,1 +1,12 @@
-{"name":"@qubitry/quantum-core","version":"0.1.0","type":"module","main":"src/index.js","scripts":{"test":"vitest run"},"devDependencies":{"vitest":"^2.1.8"},"dependencies":{"qubitry":"file:../.."}}
+{
+  "name": "@qubitry/quantum-core",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.8"
+  }
+}
