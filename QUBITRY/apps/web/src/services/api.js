@@ -23,16 +23,17 @@ async function request(endpoint, options = {}) {
 
   try {
     const res = await fetch(url, config);
-    const contentType = res.headers.get('content-type');
-    
-    // Check if response is raw text/attachment
-    if (contentType && !contentType.includes('application/json')) {
-      const text = await res.text();
-      if (!res.ok) throw new Error(text || `Request failed with status ${res.status}`);
-      return text;
+    const text = await res.text();
+    let data;
+    try {
+      data = text ? JSON.parse(text) : {};
+    } catch (e) {
+      if (!res.ok) {
+        throw new Error(`Server error (${res.status})`);
+      }
+      throw new Error(`Invalid server response`);
     }
 
-    const data = await res.json();
     if (!res.ok) {
       throw new Error(data.message || `Request failed with status ${res.status}`);
     }
