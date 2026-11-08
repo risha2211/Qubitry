@@ -2,7 +2,7 @@
 
 An interactive quantum circuit studio, exact browser-based statevector simulator, and structured learning platform.
 
-*Developed by [Risha Kanthe](https://github.com/risha2211) — Semester 6 Project.*
+Developed by Risha Kanthe
 
 ---
 
