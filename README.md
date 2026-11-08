@@ -79,7 +79,7 @@ Every lesson includes:
 1. Core Concept explanation.
 2. Mathematical formulation with Dirac notation and matrix equations.
 3. Interactive 3D Bloch sphere with state presets ($|0\rangle, |1\rangle, |+\rangle, |-\rangle, |+i\rangle$) and Born probability readouts.
-4. Practical Demonstration with a **"🔬 Open in Circuit Studio"** button that automatically seeds the circuit into Circuit Studio.
+4. Practical Demonstration with a **"🔬 Open in Circuit Studio"** button that automatically inputs the circuit into Circuit Studio.
 5. Key Takeaways recap and progress tracking.
 
 ---
