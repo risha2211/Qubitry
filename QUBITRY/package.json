@@ -1,0 +1,12 @@
+{
+  "name": "qubitry",
+  "private": true,
+  "scripts": {
+    "setup": "npm --prefix packages/quantum-core install && npm --prefix apps/web install && npm --prefix apps/server install",
+    "dev": "node scripts/dev.js",
+    "dev:server": "npm --prefix apps/server run dev",
+    "dev:web": "npm --prefix apps/web run dev",
+    "build": "npm --prefix apps/web run build",
+    "test": "npm --prefix packages/quantum-core test"
+  }
+}

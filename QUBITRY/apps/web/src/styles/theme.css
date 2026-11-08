@@ -1,0 +1,224 @@
+:root{color-scheme:dark;--bg:#0B0E14;--p:#111722;--e:#182131;--t:#ECEEF4;--m:#929CAD;--a:#A99AFF;--c:#65D5D0;--b:#283344;--ok:#55B995;--w:#D6A85B;--er:#D97882;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--t);font:14px/1.6 Inter,system-ui,sans-serif}
+h1,h2,h3{font-family:'Space Grotesk',Inter,sans-serif;font-weight:500;margin:0}
+.mono,code,pre,input,select{font-family:'JetBrains Mono',monospace}
+nav{display:flex;gap:6px;align-items:center;padding:10px 16px;border-bottom:1px solid var(--b);background:var(--p);flex-wrap:wrap}
+nav b{font-family:'Space Grotesk',sans-serif;letter-spacing:.3em;margin-right:12px}
+button,input,select,nav a{font-size:13px;color:var(--t);background:var(--e);border:1px solid var(--b);border-radius:6px;padding:5px 10px;text-decoration:none}
+button{font-family:inherit;cursor:pointer}button:hover,nav a:hover{border-color:var(--m)}
+.on,nav a.active{border-color:var(--a);color:var(--a)}.pri{background:var(--a);color:#0B0E14;border-color:var(--a)}
+.w{max-width:1200px;margin:0 auto;padding:20px 16px}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.eb{color:var(--c);font-size:12px;letter-spacing:.18em}.hero h1{font-size:44px;line-height:1.1;margin:10px 0 14px}
+.m{color:var(--m)}.card{background:var(--p);border:1px solid var(--b);border-radius:8px;padding:14px}
+.g3{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:12px}
+.tag{display:inline-block;font-size:11px;border:1px solid var(--b);border-radius:4px;padding:0 6px;margin:0 4px 4px 0;color:var(--m);text-decoration:none}
+.studio{display:grid;grid-template-columns:210px 1fr;gap:12px}
+.pal{display:flex;flex-wrap:wrap;gap:4px}.pal button{min-width:44px;padding:4px 6px}
+.cv{overflow-x:auto;background:var(--p);border:1px solid var(--b);border-radius:8px}
+.cell{fill:transparent;cursor:pointer}.cell:hover{fill:rgba(169,154,255,.08)}
+.bar{height:16px;background:var(--c);border-radius:2px;min-width:1px}
+.row{display:grid;grid-template-columns:70px 1fr 70px;gap:8px;align-items:center;font-size:12px;margin:3px 0}
+pre{background:var(--bg);border:1px solid var(--b);border-radius:6px;padding:10px;overflow:auto;font-size:12px;margin:0}
+.bg{display:flex;flex-wrap:wrap;gap:12px}label{display:block;color:var(--m);font-size:12px;margin-top:8px}
+input[type=range]{width:100%;padding:0}
+@media(max-width:800px){.hero,.studio{grid-template-columns:1fr}.hero h1{font-size:32px}}
+
+/* Landing Page: Full-Screen Pure Bloch Sphere Viewport */
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.hero-sphere-viewport {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 46px);
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+/* Minimal Micro Quantum State HUD in bottom-right */
+.micro-quantum-hud {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  z-index: 10;
+  background: rgba(17, 23, 34, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(40, 51, 68, 0.75);
+  border-radius: 10px;
+  padding: 8px 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  width: 210px;
+  box-sizing: border-box;
+}
+
+.micro-hud-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.micro-chip {
+  padding: 2px 5px;
+  font-size: 11px;
+  font-family: 'JetBrains Mono', monospace;
+  background: rgba(24, 33, 49, 0.85);
+  border: 1px solid var(--b);
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 1.2;
+  color: var(--t);
+  transition: all 0.15s ease;
+}
+
+.micro-chip:hover {
+  border-color: var(--c);
+  color: var(--c);
+}
+
+.micro-chip.active {
+  border-color: var(--c);
+  color: var(--c);
+  background: rgba(101, 213, 208, 0.15);
+}
+
+.micro-hud-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.micro-slider-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.micro-slider-row span {
+  font-size: 10px;
+  color: var(--m);
+  width: 46px;
+  flex-shrink: 0;
+}
+
+.micro-slider-row input[type=range] {
+  flex: 1;
+  height: 4px;
+  cursor: pointer;
+}
+
+/* Scroll Hint Indicator */
+.scroll-hint-indicator {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  opacity: 0.65;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+.scroll-hint-indicator:hover {
+  opacity: 1;
+  transform: translateX(-50%) translateY(2px);
+}
+
+.scroll-hint-text {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--m);
+}
+
+.scroll-hint-arrow {
+  font-size: 14px;
+  color: var(--c);
+  animation: bounceDown 2s infinite ease-in-out;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(5px); }
+}
+
+/* 2. Scroll Down Section: Big Wavy Pixel Headline & CTAs */
+.explore-section {
+  position: relative;
+  width: 100%;
+  padding: 85px 24px 60px;
+  box-sizing: border-box;
+  background: linear-gradient(180deg, var(--bg) 0%, #0d121b 100%);
+  border-top: 1px solid rgba(40, 51, 68, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.explore-content-wrap {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.explore-subtext {
+  font-size: 16px;
+  max-width: 640px;
+  margin: 22px auto 26px;
+  line-height: 1.6;
+}
+
+.explore-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+.explore-cta-group button {
+  font-size: 14px;
+  padding: 9px 22px;
+  font-weight: 500;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.explore-cta-group button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(101, 213, 208, 0.22);
+}
+
+.explore-cta-group button.pri {
+  box-shadow: 0 2px 14px rgba(169, 154, 255, 0.35);
+}
+
+.status-section {
+  padding-top: 40px;
+  padding-bottom: 50px;
+  border-top: 1px solid var(--b);
+}
+
+/* Quantum Feature Scroll Section */
+.feature-scroll-track {
+  width: 100%;
+}
+
+@media (max-width: 860px) {
+  .feature-scroll-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+}
+

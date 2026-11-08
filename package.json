@@ -1,0 +1,13 @@
+{
+  "name": "qubitry-root",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "npm --prefix QUBITRY run setup",
+    "dev:server": "npm --prefix QUBITRY/apps/server run dev",
+    "dev:web": "npm --prefix QUBITRY/apps/web run dev",
+    "dev": "node scripts/dev.js",
+    "build": "npm --prefix QUBITRY run build",
+    "test": "npm --prefix QUBITRY run test"
+  }
+}
