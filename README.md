@@ -206,41 +206,6 @@ QUBITRY/
 └── scripts/
     └── dev.js                  # Cross-platform concurrent runner (server + web)
 ```
-
----
-
-## Getting Started Locally
-
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- [npm](https://www.npmjs.com/) (v9 or higher)
-
-### Setup & Run
-```bash
-# 1. Clone repository
-git clone https://github.com/risha2211/Qubitry.git
-cd Qubitry
-
-# 2. Install dependencies across all workspaces
-npm run setup
-
-# 3. Start development servers (starts Express on :5000 and Vite on :5173)
-npm run dev
-```
-
-- **Web Application:** `http://localhost:5173`
-- **Backend API:** `http://localhost:5000`
-- **Health Check:** `http://localhost:5000/api/health`
-
-### Tests & Build
-```bash
-# Run simulator unit test suite (17 tests covering gate algebra, fidelity, and unitary evolution)
-npm test
-
-# Build production bundle
-npm run build
-```
-
 ---
 
 ## Conventions & Physics Specs
