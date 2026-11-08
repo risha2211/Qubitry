@@ -98,7 +98,7 @@ Independent practice and assessments divided into 5 distinct categories:
 
 ### 5. My Workspace & Cloud Persistence
 A centralized personal hub for managing your quantum projects:
-- **Personalized Dashboard**: Greets you with `Hi, {user.username}!` when signed in.
+- **Personalized Dashboard**
 - **Learning & Progress Hub**:
   - Live curriculum progress percentage, lessons completed, and remaining milestones.
   - **Continue Learning Card**: One-click jump to resume your active lesson.
