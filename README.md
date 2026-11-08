@@ -131,9 +131,9 @@ An interactive reference manual built into the application:
 
 ---
 
-## Complete Keyboard Shortcuts Reference
+## Keyboard Shortcuts
 
-Qubitry includes comprehensive keyboard shortcuts designed for rapid circuit construction and simulation:
+Qubitry includes keyboard shortcuts designed for rapid circuit construction and simulation:
 
 ### Editing
 | Shortcut | Action |
