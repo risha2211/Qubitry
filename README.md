@@ -21,7 +21,7 @@ The heart of Qubitry is an interactive quantum workstation supporting 1 to 6 qub
 - **Interactive Wire Canvas**: Place, drag, reorder, and remove gates on individual qubit registers ($q_0 \dots q_5$) with coordinates and timing columns.
 - **Complete Gate Library**:
   - *Single-Qubit Unitaries*: Hadamard ($H$), Pauli- $X$ (NOT), Pauli- $Y$, Pauli- $Z$, Phase ($S$, $T$, $P$), Arbitrary Rotations ($R_x(\theta)$, $R_y(\theta)$, $R_z(\theta)$ ), Identity ($I$), Reset ($|0\rangle$), and Measurement ($M$).
-  - *Multi-Qubit Unitaries*: Controlled-NOT ($CX$), Controlled- $Y$ ($CY$), Controlled- $Z$ ($CZ$), Controlled-Phase ($CP$), Controlled-$R_z$ ($CR_z$), SWAP, Toffoli ($CCX$), and Fredkin ($CSWAP$).
+  - *Multi-Qubit Unitaries*: Controlled-NOT ($CX$), Controlled- $Y$ ($CY$), Controlled- $Z$ ($CZ$), Controlled-Phase ($CP$), Controlled- $R_z$ ($CR_z$), SWAP, Toffoli ($CCX$), and Fredkin ($CSWAP$).
 - **Statevector Inspector**: View the full complex statevector $|\psi\rangle \in \mathbb{C}^{2^n}$ with exact real ($\alpha$) and imaginary ($\beta$) amplitudes, phase angles, and Born rule measurement probabilities ($P(x) = |c_x|^2$).
 - **3D Interactive Bloch Sphere**: Rotatable 3D coordinate frame displaying polar ($\theta$) and azimuthal ($\phi$) angles alongside the statevector's expectation values $\langle X \rangle, \langle Y \rangle, \langle Z \rangle$.
 - **Step-by-Step Simulation Snapshots**: Scrub through execution moment-by-moment using hotkeys (`N` for next step, `P` for previous step) to watch intermediate state collapse, phase kickback, and quantum interference happen live.
