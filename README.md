@@ -216,5 +216,4 @@ QUBITRY/
 ---
 
 ## Author
-**Risha Kanthe**  
-GitHub: [@risha2211](https://github.com/risha2211)
+**Risha Kanthe** 
