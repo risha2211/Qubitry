@@ -14,6 +14,9 @@ dotenv.config();
 mongoose.set('bufferCommands', false);
 
 export async function connectDB() {
+  if (mongoose.connection && mongoose.connection.readyState === 1) {
+    return mongoose.connection;
+  }
   let uri = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/qubitry';
   if (typeof uri === 'string') {
     uri = uri.trim();

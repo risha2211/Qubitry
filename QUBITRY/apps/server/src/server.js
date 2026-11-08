@@ -89,5 +89,11 @@ async function startServer() {
   });
 }
 
-startServer();
+// Start standalone HTTP listener only if not running inside Vercel serverless environment
+if (!process.env.VERCEL && !process.env.VERCEL_ENV) {
+  startServer();
+}
+
+export default app;
+export { app, connectDB };
 
